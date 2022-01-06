@@ -1,0 +1,13 @@
+{
+  "name": "ble-viewer-api",
+  "version": "0.0.1",
+  "description": "BLE viewer API",
+  "main": "api.js",
+  "author": "Stefan Weissenberger",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "postgres": "^1.0.2"
+  }
+}

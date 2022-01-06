@@ -1,0 +1,8 @@
+{
+  "name": "ble-viewer-frontend",
+  "version": "0.0.1",
+  "description": "BLE viewer frontend",
+  "main": "index.js",
+  "author": "Stefan Weissenberger",
+  "license": "MIT"
+}

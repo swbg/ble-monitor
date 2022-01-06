@@ -1,0 +1,37 @@
+# Bluez Adapter name (hci0, hci1, ...)
+adapter: hci0
+
+# Remote devices to consider
+# Add all devices you want to receive advertisements from
+remote_devices:
+  - mac: A4:C1:38:B3:45:7C
+    name: Device_1
+  - mac: A4:C1:38:F0:9B:73
+    name: Device_2
+  - mac: A4:C1:38:2C:6B:00
+    name: Device_3
+  - mac: A4:C1:38:76:36:D9
+    name: Device_4
+
+# Number of leading service UUID bytes to consider
+# Change to 16 for custom services
+service_uuid_length: 4
+
+# Service UUIDs to consider, length should match service_uuid_length
+service_uuids:
+  - 0000181a
+
+# Indices to use for retrieving service data
+# Params will be indexed as follows: params[params_indices[0]][params_indices[1]][...]
+params_indices:
+  - 1
+  - ServiceData
+
+# Bytes to extract from service data
+# Use comma-separated list of indices, "-" for ranges, stop is exclusive
+# Leave blank to disable mask
+data_mask: 7-
+
+# Logging file path
+# Leave blank to disable logging to file
+logging_file_path:
