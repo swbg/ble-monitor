@@ -117,7 +117,6 @@ function updateData() {
         {}
       ),
     }));
-    console.log("data update");
     data = {
       tidy,
       grouped: d3.group(tidy, (d) => d.deviceMac),
@@ -142,7 +141,6 @@ function updateSize(width) {
 }
 
 function updatePlot(extent) {
-  console.log("ipdated blp");
   if (!data) {
     return;
   }
@@ -158,7 +156,6 @@ function updatePlot(extent) {
     ax.xg.call(d3.axisBottom(ax.x));
 
     // Adjust y scale
-    console.log(d3.extent(data.tidy, (d) => d[ax.id]));
     ax.y.domain(d3.extent(data.tidy, (d) => d[ax.id]));
     ax.yg.call(d3.axisLeft(ax.y));
 
@@ -184,7 +181,6 @@ function updatePlot(extent) {
 }
 
 const resizeObserver = new ResizeObserver((entries) => {
-  console.log("resob");
   for (let entry of entries) {
     const rect = entry.target.getBoundingClientRect();
     updateSize(rect.width);
