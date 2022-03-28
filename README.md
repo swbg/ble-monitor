@@ -56,6 +56,8 @@ You can use the simple API and frontend in `viewer` to display your data. The fr
 
 You need to have `node` and `yarn` installed. Navigate to `viewer/api` and install the dependencies for the API with `yarn install` and start the api with `node api.js`. Start the frontend with `npx http-server viewer/frontend` or your server of choice.
 
+![Viewer](./images/viewer.jpg)
+
 ## Remote data collection
 
 You may want to collect data on a remote device (like a Raspberry Pi, etc.). Make sure you allow remote connections to the database on this device by adding the following line to `/etc/postgresql/<version>/main/pg_hba.conf` (run `show hba_file` in `psql` if you cannot locate the correct file):
